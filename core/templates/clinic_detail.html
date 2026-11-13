@@ -1,0 +1,59 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="clinic-detail-card">
+
+    <h1>{{ clinic.name }}</h1>
+
+    <p>Specialty: {{ clinic.specialty }}</p>
+
+    <p>Location: {{ clinic.location }}</p>
+
+    <h2>Doctors</h2>
+
+    <div class="doctors-container">
+
+        {% for doctor in doctors %}
+
+            <div class="doctor-card">
+
+                {% if doctor.name == "Ahmad Khalil" %}
+                     <img src="{% static 'image/ahmad_khalil.png' %}" alt="Doctor">
+                {% endif %}
+
+                {% if doctor.name == "Ahmad" %}
+                    <img src="{% static 'image/ahmad.png' %}" alt="Doctor">
+                {% endif %}
+
+                {% if doctor.name == "Lina Ahmad" %}
+                    <img src="{% static 'image/lina.png' %}" alt="Doctor">
+                {% endif %}
+
+                {% if doctor.name == "Omar Ali" %}
+                    <img src="{% static 'image/omar_ali.png' %}" alt="Doctor">
+                {% endif %}
+
+                {% if doctor.name == "Sara Hassan" %}
+                    <img src="{% static 'image/sara.png' %}" alt="Doctor">
+                {% endif %}
+
+                {% if doctor.name == "Yazan Saleh" %}
+                    <img src="{% static 'image/yazan_saleh.png' %}" alt="Doctor">
+                {% endif %}
+                <h3>Dr. {{ doctor.name }}</h3>
+
+                <p>{{ doctor.specialty }}</p>
+
+                <a href="/doctor/{{ doctor.id }}/" class="doctor-button">View Doctor</a>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

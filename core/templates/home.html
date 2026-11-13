@@ -1,0 +1,114 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+
+<div style="display: flex; align-items: center; gap: 30px; width: 100%;">
+
+    <div style="flex: 1; min-width: 0;">
+
+        <h1 style="font-size: 44px; white-space: nowrap;">
+            Skip the Waiting Room.
+        </h1>
+
+        <p style="font-size: 21px;">
+            Find your clinic, choose your doctor,
+            and join the queue online.
+        </p>
+
+        <a class="clinic-button" href="/clinics/">
+            Find a Clinic
+        </a>
+
+    </div>
+
+    <div style="flex: 0 0 380px; width: 380px;">
+
+        <img
+            src="{% static 'image/queue-steps.png' %}"
+            alt="How QueueMe works"
+            style="width: 380px; height: auto; display: block;"
+        >
+
+    </div>
+
+</div>
+
+
+<!-- How QueueMe Works Section -->
+
+<section class="how-it-works">
+
+    <h2>How QueueMe Works</h2>
+
+    <p class="section-subtitle">4 Simple Steps</p>
+
+    <div class="steps-container">
+
+        <!-- Step 1 -->
+
+        <div class="step-card">
+
+            <div class="step-number">1</div>
+
+            <h3>Find a Clinic</h3>
+
+            <p>
+                Browse available clinics and choose your preferred clinic.
+            </p>
+
+        </div>
+
+
+        <!-- Step 2 -->
+
+        <div class="step-card">
+
+            <div class="step-number">2</div>
+
+            <h3>Choose a Doctor</h3>
+
+            <p>
+                Explore doctors and select the one you prefer.
+            </p>
+
+        </div>
+
+
+        <!-- Step 3 -->
+
+        <div class="step-card">
+
+            <div class="step-number">3</div>
+
+            <h3>Join the Queue</h3>
+
+            <p>
+                Join your selected doctor's queue online.
+            </p>
+
+        </div>
+
+
+        <!-- Step 4 -->
+
+        <div class="step-card">
+
+            <div class="step-number">4</div>
+
+            <h3>View Your Queue</h3>
+
+            <p>
+                Check your queue number and estimated waiting time.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Dr. {{ doctor.name }}</h1>
+
+<p>Specialty: {{ doctor.specialty }}</p>
+
+<a href="/doctor/{{ doctor.id }}/join/" class="clinic-button">Join Queue</a>
+
+{% if show_popup %}
+
+<div class="queue-popup">
+
+    <h2>Queue Status</h2>
+
+    <p>Your number: {{ queue_number }}</p>
+
+    <p>People before you: {{ people_before }}</p>
+
+    <p>Estimated wait: {{ estimated_wait }} minutes</p>
+
+    <a href="/doctor/{{ doctor.id }}/" class="clinic-button">Close</a>
+
+</div>
+
+{% endif %}
+
+<h2>Education</h2>
+
+<div class="doctor-info-card">
+    <p>{{ doctor.education }}</p>
+</div>
+
+<h2>Work Experience</h2>
+
+<div class="doctor-info-card">
+    <p>{{ doctor.work_experience }}</p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Clinics</h1>
+<p>Find a clinic and join its queue.</p>
+{% for clinic in clinics %}
+    <div class="clinic-card">
+        <h2>{{ clinic.name }}</h2>
+        <p>{{ clinic.specialty }}</p>
+        <p>{{ clinic.location }}</p>
+        <a href="/clinic/{{ clinic.id }}/" class="clinic-button">View Clinic</a>
+    </div>
+{% endfor %}
+
+{% endblock %}
